@@ -20,25 +20,25 @@ namespace WindowsFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
             // описываем переменные
-            int a, b, c;
+            double x,y,c;
             // пытаем преобразовать строку из textBox1.Text в целое число
-            bool rez1 = int.TryParse(textBox1.Text, out a);
+            bool rez1 = double.TryParse(textBox1.Text, out x);
             if (rez1 == false) // если возникла ли ошибка преобразования
             {                  // то выводим сообщение и заканчиваем работу метода
                 MessageBox.Show("Неверный формат числа " + textBox1.Text + "!");
                 return; // заканчиваем работу метода
             }
             // пытаем преобразовать строку из textBox2.Text в целое число
-            bool rez2 = int.TryParse(textBox2.Text, out b);
+            bool rez2 = double.TryParse(textBox2.Text, out y);
             if (rez2 == false) // если возникла ли ошибка преобразования
             {                  // то выводим сообщение и заканчиваем работу метода
                 MessageBox.Show("Неверный формат числа " + textBox2.Text + "!");
-                return; // заканчиваем работу метода
+                return; 
             }
-            c = a + b;
+            c = 2 * (Math.Sin(x) + Math.Cos(y));
             string cStr = c.ToString();
             label2.Text = cStr;
-            return; // заканчиваем работу метода
+            return; 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
