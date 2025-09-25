@@ -19,19 +19,17 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // описываем переменные
+          
             double x,y,c;
-            // пытаем преобразовать строку из textBox1.Text в целое число
             bool rez1 = double.TryParse(textBox1.Text, out x);
-            if (rez1 == false) // если возникла ли ошибка преобразования
-            {                  // то выводим сообщение и заканчиваем работу метода
+            if (rez1 == false) 
+            {                
                 MessageBox.Show("Неверный формат числа " + textBox1.Text + "!");
-                return; // заканчиваем работу метода
+                return; 
             }
-            // пытаем преобразовать строку из textBox2.Text в целое число
             bool rez2 = double.TryParse(textBox2.Text, out y);
-            if (rez2 == false) // если возникла ли ошибка преобразования
-            {                  // то выводим сообщение и заканчиваем работу метода
+            if (rez2 == false) 
+            {                 
                 MessageBox.Show("Неверный формат числа " + textBox2.Text + "!");
                 return; 
             }
@@ -65,5 +63,7 @@ namespace WindowsFormsApp2
         {
 
         }
+
     }
 }
+// Делала работу Бахмаева Милана Руслановна 23ИС
